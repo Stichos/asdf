@@ -1,0 +1,22 @@
+[build]
+  command = "bun run build"
+  publish = "build"
+
+[dev]
+  framework = "next"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[images]
+  remote_images = [
+    "https://ext.same-assets.com/.*",
+    "https://source.unsplash.com/.*",
+    "https://images.unsplash.com/.*",
+    "https://ugc.same-assets.com/.*"
+  ]
